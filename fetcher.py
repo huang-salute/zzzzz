@@ -13,7 +13,7 @@ secrets = ap.Namespace()
 # Load the secrets from file so some scrublord like me doesn't accidentally commit them to git.
 with open("SECRETS.txt") as f:
     for line in f:
-        vals = line.strip().split('=', 1)
+        vals = line.strip().split('=', 2)
         setattr(secrets, vals[0].lower(), vals[1])
 
 
